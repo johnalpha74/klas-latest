@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* KLAS design system v1.0 — one dark theme. Keep in sync with the design system's tokens.json. */
+@layer base {
+  :root {
+    --background: #111111;
+    --surface: #1c1c1c;
+    --surface-disabled: #30343b;
+    --text: #f7f8fa;
+    --muted: #b8bec8;
+    --text-disabled: #a6adb8;
+    --border: #626873;
+    --primary: #39a2d6;
+    --primary-hover: #2d91c5;
+    --on-primary: #111111;
+    --accent: #f4b400;
+    --accent-hover: #dfa300;
+    --on-accent: #111111;
+    --recruiter: #991b1f;
+    --recruiter-hover: #83171b;
+    --on-recruiter: #f7f8fa;
+    --success: #55c98b;
+    --warning: #f4b400;
+    --error: #ff8b8b;
+    --focus: #7dd3fc;
+    color-scheme: dark;
+  }
+
+  html { @apply bg-background text-foreground; }
+  body { @apply min-h-screen bg-background font-sans text-body text-foreground antialiased; }
+
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition-duration: 0ms !important; animation-duration: 0ms !important; }
+  }
+}

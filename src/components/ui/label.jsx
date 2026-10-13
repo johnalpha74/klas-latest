@@ -1,0 +1,10 @@
+import { cn } from '@/lib/utils';
+
+export function Label({ className, required, children, ...props }) {
+  return (
+    <label className={cn('text-label text-foreground', className)} {...props}>
+      {children}
+      {required && <span aria-hidden="true" className="ml-0.5 text-error">*</span>}
+    </label>
+  );
+}
